@@ -13,15 +13,18 @@ import Firstpage from './firstpage/firstpage';
 import Detailevent from './commoncomponent/detailEvent/detailevent';
 import Registeredevents from './commoncomponent/detailEvent/registeredevents';
 import Contactus from './commoncomponent/contactus/contactus';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import Detaileventngo from './componentsngo/eventdetailsngo/eventdetailsngo';
 import Updatengo from './componentsngo/updatengo/updatengo';
 import Updatevol from './componentsvol/updatevol/updatevol';
 import Updatedon from './componentsdonor/updatedon/updatedon';
 import Updateevents from './componentsngo/updateevent/updateevent';
 import Donatemoney from './componentsdonor/donatemoney/donatemoney';
+import DonationSuccess from './componentsdonor/donatethings/donationSuccess/donationSuccess';
 import Donatethings from './componentsdonor/donatethings/donatethings';
 import Transection from './componentsngo/transection/transection';
+import ThingRegister from './componentsdonor/thingsRegister/thingregister';
+// import Viewtrans from './componentsdonor/viewtrans/viewtrans';
 
 import {
   BrowserRouter as Router,
@@ -29,6 +32,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+
 
 
 
@@ -69,11 +73,24 @@ function App() {
           <Route path="/logindon">
             <Logindon setLoginVolunteer={setLoginDonor} />
           </Route>
-          
+
+          <Route path="/thingregister">
+            <ThingRegister/>
+          </Route>
+
+          <Route path="/donationSuccess">
+            <DonationSuccess/>
+          </Route>
+
           <Route path="/registerdon">
 
             <Registerdon />
           </Route>
+
+          {/* <Route path="/viewtrans">
+
+            <Viewtrans />
+          </Route> */}
 
           <Route path="/transection">
 
